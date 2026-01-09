@@ -1,0 +1,95 @@
+export const mockLoanData = {
+  metadata: {
+    version: "1.0",
+    last_updated: "2025-06-21T11:00:00Z",
+    schema_type: "LoanJSON-Standard",
+  },
+  loan_id: "LMA-001",
+  borrower: {
+    name: "TechCorp Industries SA",
+    jurisdiction: "Luxembourg",
+    sector: "Technology",
+    credit_rating: "BBB+",
+  },
+  loan_terms: {
+    principal: { amount: 25000000, currency: "EUR" },
+    interest_rate: {
+      type: "floating",
+      base: "EURIBOR",
+      margin: 1.5,
+      current_all_in: 5.2,
+    },
+    maturity_date: "2030-06-21",
+    origination_date: "2023-06-21",
+  },
+  covenants: [
+    {
+      id: "COV-01",
+      description: "Minimum uptime requirement",
+      threshold: 98,
+      unit: "percent",
+      current_value: 96.8,
+      status: "breached",
+      last_check: "2025-06-20",
+    },
+    {
+      id: "COV-02",
+      description: "Debt-to-EBITDA ratio",
+      threshold: 3.5,
+      unit: "ratio",
+      current_value: 2.8,
+      status: "compliant",
+      last_check: "2025-06-15",
+    },
+    {
+      id: "COV-03",
+      description: "Interest coverage ratio",
+      threshold: 2.0,
+      unit: "ratio",
+      current_value: 2.4,
+      status: "compliant",
+      last_check: "2025-06-15",
+    },
+  ],
+  risk_engine: {
+    health_score: 72,
+    trend: "decreasing",
+    prediction: {
+      probability_of_default: 0.18,
+      horizon: "90d",
+      factors: ["Covenant COV-01 breach", "Sector volatility", "Interest rate environment"],
+    },
+  },
+  timeline: [
+    {
+      date: "2023-06-21",
+      event: "Loan Origination",
+      description: "Initial loan agreement signed and funded",
+      type: "origination",
+    },
+    {
+      date: "2024-01-15",
+      event: "Amendment #1",
+      description: "Covenant thresholds adjusted due to market conditions",
+      type: "amendment",
+    },
+    {
+      date: "2024-06-21",
+      event: "Annual Review",
+      description: "Successful annual credit review completed",
+      type: "review",
+    },
+    {
+      date: "2025-03-10",
+      event: "Payment Received",
+      description: "Quarterly interest payment processed",
+      type: "payment",
+    },
+    {
+      date: "2025-06-20",
+      event: "Covenant Breach",
+      description: "Minimum uptime requirement not met (96.8% vs 98%)",
+      type: "breach",
+    },
+  ],
+}
