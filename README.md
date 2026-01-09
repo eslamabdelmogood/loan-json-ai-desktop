@@ -195,14 +195,14 @@ This project is a hackathon prototype and does not provide financial advice or c
 ## How to test or try it:
 
 1- open the repository: 
-https://github.com/eslamabdelmogood/v0-loan-json-ai-dashboard
+https://github.com/eslamabdelmogood/loan-json-ai-desktop
 
 2-Search for a folder named : input
 
 3-Download the file inside. file name : laon.json
 
 4- Open the website using this link : 
-https://v0-loan-json-ai-dashboard.vercel.app/
+https://v0-v0loanjsonaidashboardmain-q3.vercel.app/
 
 5-Click on the icon 'upload leaon file ' and upload file 'laon.json'
 
